@@ -9,14 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Visualization & Content Choices: 
-        - Profile: Static text for a quick, high-level summary. Goal: Inform. Method: HTML.
-        - Experience: An interactive vertical timeline. Goal: Show change/progression. Method: HTML/CSS/JS. Clicking on a job toggles the visibility of its details, making the section less cluttered and more engaging.
-        - Skills: A radar chart for Software/Programming skills. Goal: Compare proficiency across multiple tools. Method: Chart.js. This offers a quick visual summary of his technical capabilities. Text lists are used for other skills.
-        - Projects: A filterable grid of project cards. Goal: Organize/Inform. Method: HTML/CSS/JS. Users can filter by "Petróleo & Gás" or "Mineração", allowing them to focus on the most relevant case studies. This directly addresses the need to tailor the CV for specific sectors.
-        - Publications/Education: Clean, simple text lists for clarity and professionalism. Goal: Inform. Method: HTML.
-    -->
-    <style>
+    
+<style>
         body {
             font-family: 'Inter', sans-serif;
         }
@@ -59,9 +53,10 @@
     <div class="flex min-h-screen">
         <aside class="w-64 bg-stone-800 text-stone-200 p-8 fixed h-full hidden lg:flex flex-col justify-between">
             <div>
+                <img src="Cvfoto.jpg" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-teal-400 object-cover" alt="Foto de Julio Rueda">
                 <h1 class="text-3xl font-bold text-white">Julio Rueda</h1>
                 <p class="text-teal-400 mt-1">Engenheiro Geotécnico</p>
-                <nav id="desktop-nav" class="mt-12 space-y-2">
+                <nav id="desktop-nav" class="mt-8 space-y-2">
                     <a href="#perfil" class="block py-2 px-4 rounded-md transition-all duration-300 hover:bg-teal-500 hover:text-white">Perfil</a>
                     <a href="#experiencia" class="block py-2 px-4 rounded-md transition-all duration-300 hover:bg-teal-500 hover:text-white">Experiência</a>
                     <a href="#competencias" class="block py-2 px-4 rounded-md transition-all duration-300 hover:bg-teal-500 hover:text-white">Competências</a>
@@ -71,16 +66,19 @@
                 </nav>
             </div>
             <div class="text-xs text-stone-400">
-                <p>&copy; 2024 Julio Rueda</p>
+                <p>&copy; 2025 Julio Rueda</p>
                 <p>Currículo Interativo</p>
             </div>
         </aside>
 
         <header class="lg:hidden fixed top-0 left-0 right-0 bg-stone-800 text-white p-4 shadow-md z-50">
             <div class="flex justify-between items-center">
-                <div>
-                    <h1 class="text-xl font-bold">Julio Rueda</h1>
-                    <p class="text-teal-400 text-sm">Engenheiro Geotécnico</p>
+                <div class="flex items-center">
+                    <img src="Cvfoto.jpg" class="w-16 h-16 rounded-full mr-4 object-cover" alt="Foto de Julio Rueda">
+                    <div>
+                        <h1 class="text-xl font-bold">Julio Rueda</h1>
+                        <p class="text-teal-400 text-sm">Engenheiro Geotécnico</p>
+                    </div>
                 </div>
                 <button id="menu-button" class="p-2">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -105,7 +103,7 @@
                         Doutor e Mestre em Engenharia Civil (Geotecnia) pela PUC-Rio e Engenheiro Civil pela Universidade Industrial de Santander. Sou um especialista em Geomecânica Computacional com vasta experiência no desenvolvimento e aplicação de modelos numéricos robustos para simulação avançada de problemas multifísicos em rochas e solos.
                     </p>
                     <p class="leading-relaxed mb-4">
-                        Minha expertise é focada em desafios complexos nos setores de **Mineração** (estabilidade de taludes, barragens, subsidência) e **Petróleo & Gás** (ativação de falhas, estabilidade de poços, fraturamento hidráulico). Busco aplicar soluções inovadoras para otimizar processos e garantir a integridade estrutural em projetos de alta complexidade.
+                        Minha expertise é focada em desafios complexos nos setores de Mineração (estabilidade de taludes, barragens, subsidência) e Petróleo & Gás (ativação de falhas, estabilidade de poços, fraturamento hidráulico). Busco aplicar soluções inovadoras para otimizar processos e garantir a integridade estrutural em projetos de alta complexidade.
                     </p>
                     <div class="flex flex-wrap gap-4 text-sm mt-6">
                         <a href="mailto:julioa@tecgraf.puc-rio.br" class="bg-stone-200 hover:bg-stone-300 text-stone-800 font-medium py-2 px-4 rounded-full transition-all duration-300">✉️ E-mail</a>
@@ -191,7 +189,7 @@
                 <h2 class="text-3xl font-bold text-teal-600 border-b-2 border-teal-200 pb-2 mb-8">Publicações</h2>
                  <p class="mb-8 text-stone-600">Minhas contribuições para a comunidade científica incluem múltiplos artigos em periódicos de alto impacto e apresentações em congressos internacionais. Você pode explorar minhas publicações em detalhe através dos links para meus perfis acadêmicos.</p>
                 <div class="bg-white p-8 rounded-lg shadow-md">
-                    <p class="text-lg mb-4">Autor de **11 artigos completos** publicados em periódicos internacionais revisados por pares (9 na categoria A1 e 2 na A2, segundo Capes) e **17 trabalhos completos** em anais de congressos.</p>
+                    <p class="text-lg mb-4">Autor de **11 artigos completos** publicados em periódicos internacionais revisados por pares (9 na categoria A1 e 2 na A2, segundo Capes) e **11 trabalhos completos** em anais de congressos.</p>
                     <div class="flex flex-wrap gap-4 mt-6">
                         <a href="https://scholar.google.com.br/citations?hl=en&user=KejLXuAAAAAJ" target="_blank" class="bg-stone-200 hover:bg-stone-300 text-stone-800 font-medium py-2 px-4 rounded-full transition-all duration-300">Google Scholar</a>
                         <a href="https://www.researchgate.net/profile/Julio-Rueda-Cordero" target="_blank" class="bg-stone-200 hover:bg-stone-300 text-stone-800 font-medium py-2 px-4 rounded-full transition-all duration-300">ResearchGate</a>

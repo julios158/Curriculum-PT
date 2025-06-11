@@ -46,105 +46,108 @@
             background-color: #14b8a6;
             color: white;
         }
-    </style>
+        .lang-switcher a.active {
+            color: #14b8a6;
+            font-weight: bold;
+        }
+</style>
 </head>
 <body class="bg-stone-100 text-stone-800">
 
     <div class="flex min-h-screen">
         <aside class="w-64 bg-stone-800 text-stone-200 p-8 fixed h-full hidden lg:flex flex-col justify-between">
             <div>
-                <img src="Cvfoto.jpg" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-teal-400 object-cover" alt="Foto de Julio Rueda">
+                <img src="https://raw.githubusercontent.com/julios158/curriculum-pt/main/Cvfoto.jpg" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-teal-400 object-cover" alt="Foto de Julio Rueda">
                 <h1 class="text-3xl font-bold text-white">Julio Rueda</h1>
-                <p class="text-teal-400 mt-1">Engenheiro Geotécnico</p>
+                <p id="aside-job-title" class="text-teal-400 mt-1"></p>
+                <div class="lang-switcher text-sm mt-4 text-center space-x-2">
+                    <a href="#" data-lang="pt" class="text-stone-400 hover:text-white">PT</a>
+                    <span class="text-stone-500">|</span>
+                    <a href="#" data-lang="es" class="text-stone-400 hover:text-white">ES</a>
+                    <span class="text-stone-500">|</span>
+                    <a href="#" data-lang="en" class="text-stone-400 hover:text-white">EN</a>
+                </div>
                 <nav id="desktop-nav" class="mt-8 space-y-2">
-                    <a href="#perfil" class="block py-2 px-4 rounded-md transition-all duration-300 hover:bg-teal-500 hover:text-white">Perfil</a>
-                    <a href="#experiencia" class="block py-2 px-4 rounded-md transition-all duration-300 hover:bg-teal-500 hover:text-white">Experiência</a>
-                    <a href="#competencias" class="block py-2 px-4 rounded-md transition-all duration-300 hover:bg-teal-500 hover:text-white">Competências</a>
-                    <a href="#projetos" class="block py-2 px-4 rounded-md transition-all duration-300 hover:bg-teal-500 hover:text-white">Projetos Relevantes</a>
-                    <a href="#formacao" class="block py-2 px-4 rounded-md transition-all duration-300 hover:bg-teal-500 hover:text-white">Formação e Prêmios</a>
-                    <a href="#publicacoes" class="block py-2 px-4 rounded-md transition-all duration-300 hover:bg-teal-500 hover:text-white">Publicações</a>
+                    <a href="#perfil" data-nav="profile"></a>
+                    <a href="#experiencia" data-nav="experience"></a>
+                    <a href="#competencias" data-nav="skills"></a>
+                    <a href="#projetos" data-nav="projects"></a>
+                    <a href="#formacao" data-nav="education"></a>
+                    <a href="#publicacoes" data-nav="publications"></a>
                 </nav>
             </div>
             <div class="text-xs text-stone-400">
                 <p>&copy; 2025 Julio Rueda</p>
-                <p>Currículo Interativo</p>
+                <p id="aside-footer-title"></p>
             </div>
         </aside>
 
         <header class="lg:hidden fixed top-0 left-0 right-0 bg-stone-800 text-white p-4 shadow-md z-50">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <img src="Cvfoto.jpg" class="w-16 h-16 rounded-full mr-4 object-cover" alt="Foto de Julio Rueda">
+                    <img src="https://raw.githubusercontent.com/julios158/curriculum-pt/main/Cvfoto.jpg" class="w-16 h-16 rounded-full mr-4 object-cover" alt="Foto de Julio Rueda">
                     <div>
                         <h1 class="text-xl font-bold">Julio Rueda</h1>
-                        <p class="text-teal-400 text-sm">Engenheiro Geotécnico</p>
+                        <p id="header-job-title" class="text-teal-400 text-sm"></p>
                     </div>
                 </div>
                 <button id="menu-button" class="p-2">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
-            <nav id="mobile-nav" class="hidden mt-4 space-y-2">
-                 <a href="#perfil" class="block py-2 px-4 rounded-md transition-all duration-300 hover:bg-teal-500 hover:text-white">Perfil</a>
-                 <a href="#experiencia" class="block py-2 px-4 rounded-md transition-all duration-300 hover:bg-teal-500 hover:text-white">Experiência</a>
-                 <a href="#competencias" class="block py-2 px-4 rounded-md transition-all duration-300 hover:bg-teal-500 hover:text-white">Competências</a>
-                 <a href="#projetos" class="block py-2 px-4 rounded-md transition-all duration-300 hover:bg-teal-500 hover:text-white">Projetos Relevantes</a>
-                 <a href="#formacao" class="block py-2 px-4 rounded-md transition-all duration-300 hover:bg-teal-500 hover:text-white">Formação e Prêmios</a>
-                 <a href="#publicacoes" class="block py-2 px-4 rounded-md transition-all duration-300 hover:bg-teal-500 hover:text-white">Publicações</a>
+             <div class="lang-switcher text-center text-xs py-2 space-x-2">
+                    <a href="#" data-lang="pt" class="text-stone-300 hover:text-white">PT</a>
+                    <span class="text-stone-400">|</span>
+                    <a href="#" data-lang="es" class="text-stone-300 hover:text-white">ES</a>
+                    <span class="text-stone-400">|</span>
+                    <a href="#" data-lang="en" class="text-stone-300 hover:text-white">EN</a>
+            </div>
+            <nav id="mobile-nav" class="hidden mt-2 space-y-2">
+                 <a href="#perfil" data-nav="profile"></a>
+                 <a href="#experiencia" data-nav="experience"></a>
+                 <a href="#competencias" data-nav="skills"></a>
+                 <a href="#projetos" data-nav="projects"></a>
+                 <a href="#formacao" data-nav="education"></a>
+                 <a href="#publicacoes" data-nav="publications"></a>
             </nav>
         </header>
 
-        <main class="lg:ml-64 flex-1 p-6 sm:p-8 md:p-12 lg:p-16 mt-24 lg:mt-0">
+        <main class="lg:ml-64 flex-1 p-6 sm:p-8 md:p-12 lg:p-16 mt-32 lg:mt-0">
             
             <section id="perfil" class="mb-16 scroll-mt-24">
-                <h2 class="text-3xl font-bold text-teal-600 border-b-2 border-teal-200 pb-2 mb-6">Perfil Profissional</h2>
+                <h2 id="profile-title" class="text-3xl font-bold text-teal-600 border-b-2 border-teal-200 pb-2 mb-6"></h2>
                 <div class="bg-white p-8 rounded-lg shadow-md">
-                    <p class="text-lg leading-relaxed mb-4">
-                        Doutor e Mestre em Engenharia Civil (Geotecnia) pela PUC-Rio e Engenheiro Civil pela Universidade Industrial de Santander. Sou um especialista em Geomecânica Computacional com vasta experiência no desenvolvimento e aplicação de modelos numéricos robustos para simulação avançada de problemas multifísicos em rochas e solos.
-                    </p>
-                    <p class="leading-relaxed mb-4">
-                        Minha expertise é focada em desafios complexos nos setores de Mineração (estabilidade de taludes, barragens, subsidência) e Petróleo & Gás (ativação de falhas, estabilidade de poços, fraturamento hidráulico). Busco aplicar soluções inovadoras para otimizar processos e garantir a integridade estrutural em projetos de alta complexidade.
-                    </p>
+                    <p id="profile-p1" class="text-lg leading-relaxed mb-4"></p>
+                    <p id="profile-p2" class="leading-relaxed mb-4"></p>
                     <div class="flex flex-wrap gap-4 text-sm mt-6">
-                        <a href="mailto:julioa@tecgraf.puc-rio.br" class="bg-stone-200 hover:bg-stone-300 text-stone-800 font-medium py-2 px-4 rounded-full transition-all duration-300">✉️ E-mail</a>
+                        <a href="mailto:julioa@tecgraf.puc-rio.br" id="profile-email" class="bg-stone-200 hover:bg-stone-300 text-stone-800 font-medium py-2 px-4 rounded-full transition-all duration-300"></a>
                         <a href="https://www.linkedin.com/in/julio-rueda-38b7a242" target="_blank" class="bg-stone-200 hover:bg-stone-300 text-stone-800 font-medium py-2 px-4 rounded-full transition-all duration-300">🔗 LinkedIn</a>
-                        <a href="http://lattes.cnpq.br/0136131192006175" target="_blank" class="bg-stone-200 hover:bg-stone-300 text-stone-800 font-medium py-2 px-4 rounded-full transition-all duration-300">📄 Lattes</a>
+                        <a href="http://lattes.cnpq.br/0136131192006175" target="_blank" id="profile-lattes" class="bg-stone-200 hover:bg-stone-300 text-stone-800 font-medium py-2 px-4 rounded-full transition-all duration-300"></a>
                     </div>
                 </div>
             </section>
 
             <section id="experiencia" class="mb-16 scroll-mt-24">
-                <h2 class="text-3xl font-bold text-teal-600 border-b-2 border-teal-200 pb-2 mb-8">Experiência Profissional</h2>
-                <p class="mb-8 text-stone-600">Esta seção detalha minha trajetória profissional, focada em pesquisa aplicada, desenvolvimento e consultoria em geomecânica. Clique em cada cargo para ver mais detalhes sobre as responsabilidades e contribuições em cada posição.</p>
+                <h2 id="experience-title" class="text-3xl font-bold text-teal-600 border-b-2 border-teal-200 pb-2 mb-8"></h2>
+                <p id="experience-intro" class="mb-8 text-stone-600"></p>
                 <div id="timeline-container" class="relative pl-5"></div>
             </section>
 
             <section id="competencias" class="mb-16 scroll-mt-24">
-                <h2 class="text-3xl font-bold text-teal-600 border-b-2 border-teal-200 pb-2 mb-8">Competências Técnicas</h2>
-                <p class="mb-8 text-stone-600">Aqui apresento minhas principais competências, desde a análise geotécnica até a programação e uso de softwares especializados. O gráfico de radar ilustra minha proficiência nas principais ferramentas de software e linguagens de programação que utilizo para desenvolver soluções geomecânicas avançadas.</p>
+                <h2 id="skills-title" class="text-3xl font-bold text-teal-600 border-b-2 border-teal-200 pb-2 mb-8"></h2>
+                <p id="skills-intro" class="mb-8 text-stone-600"></p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="font-bold text-xl mb-4 text-stone-700">Áreas de Atuação</h3>
-                        <ul class="space-y-2 list-disc list-inside">
-                            <li>Análise Geotécnica Avançada</li>
-                            <li>Modelagem Numérica (FEM, DEM, FDM)</li>
-                            <li>Geomecânica para Petróleo e Gás</li>
-                            <li>Geotecnia de Mineração</li>
-                            <li>Estabilidade de Estruturas Geotécnicas</li>
-                            <li>Propagação de Fraturas Hidráulicas</li>
-                        </ul>
+                        <h3 id="skills-areas-title" class="font-bold text-xl mb-4 text-stone-700"></h3>
+                        <ul id="skills-areas-list" class="space-y-2 list-disc list-inside"></ul>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="font-bold text-xl mb-4 text-stone-700">Idiomas</h3>
-                        <ul class="space-y-2 list-disc list-inside">
-                            <li><span class="font-semibold">Espanhol:</span> Nativo</li>
-                            <li><span class="font-semibold">Português:</span> Fluente</li>
-                            <li><span class="font-semibold">Inglês:</span> Fluente</li>
-                        </ul>
+                        <h3 id="skills-languages-title" class="font-bold text-xl mb-4 text-stone-700"></h3>
+                        <ul id="skills-languages-list" class="space-y-2 list-disc list-inside"></ul>
                     </div>
                 </div>
                  <div class="bg-white p-6 rounded-lg shadow-md mt-8">
-                    <h3 class="font-bold text-xl mb-4 text-center text-stone-700">Software e Programação</h3>
+                    <h3 id="skills-software-title" class="font-bold text-xl mb-4 text-center text-stone-700"></h3>
                     <div class="chart-container">
                         <canvas id="skillsChart"></canvas>
                     </div>
@@ -152,48 +155,32 @@
             </section>
 
             <section id="projetos" class="mb-16 scroll-mt-24">
-                <h2 class="text-3xl font-bold text-teal-600 border-b-2 border-teal-200 pb-2 mb-8">Projetos Relevantes</h2>
-                <p class="mb-8 text-stone-600">Explore uma seleção de projetos que demonstram a aplicação prática da minha expertise em geomecânica. Use os filtros para visualizar projetos específicos dos setores de Petróleo & Gás ou Mineração, e veja como minhas contribuições levaram a resultados como otimização de produção e garantia de segurança operacional.</p>
+                <h2 id="projects-title" class="text-3xl font-bold text-teal-600 border-b-2 border-teal-200 pb-2 mb-8"></h2>
+                <p id="projects-intro" class="mb-8 text-stone-600"></p>
                 <div class="flex justify-center gap-4 mb-8">
-                    <button class="filter-btn bg-teal-500 text-white py-2 px-6 rounded-full transition-all duration-300" data-filter="all">Todos</button>
-                    <button class="filter-btn bg-stone-200 hover:bg-stone-300 text-stone-800 py-2 px-6 rounded-full transition-all duration-300" data-filter="petroleo">Petróleo & Gás</button>
-                    <button class="filter-btn bg-stone-200 hover:bg-stone-300 text-stone-800 py-2 px-6 rounded-full transition-all duration-300" data-filter="mineracao">Mineração</button>
+                    <button class="filter-btn" data-filter="all"></button>
+                    <button class="filter-btn" data-filter="petroleo"></button>
+                    <button class="filter-btn" data-filter="mineracao"></button>
                 </div>
                 <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 </div>
             </section>
             
             <section id="formacao" class="mb-16 scroll-mt-24">
-                <h2 class="text-3xl font-bold text-teal-600 border-b-2 border-teal-200 pb-2 mb-8">Formação e Prêmios</h2>
-                <p class="mb-8 text-stone-600">Esta seção destaca minha formação acadêmica e os reconhecimentos recebidos, que refletem a excelência e o impacto da minha pesquisa e trabalho acadêmico no campo da engenharia geotécnica.</p>
-                <div class="space-y-6">
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="font-bold text-xl text-stone-700">Doutor em Engenharia Civil (D.Sc.)</h3>
-                        <p class="text-teal-600">Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), 2017-2021</p>
-                        <p class="mt-2 bg-teal-50 text-teal-700 inline-block py-1 px-3 rounded-full text-sm font-semibold">🏆 Prêmio CAPES de Tese Edição 2022 & FAPERJ Nota 10</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="font-bold text-xl text-stone-700">Mestrado em Engenharia Civil (M.Sc.)</h3>
-                        <p class="text-teal-600">Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), 2010-2013</p>
-                        <p class="mt-2 bg-teal-50 text-teal-700 inline-block py-1 px-3 rounded-full text-sm font-semibold">🏆 FAPERJ Nota 10</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="font-bold text-xl text-stone-700">Graduação em Engenharia Civil</h3>
-                        <p class="text-teal-600">Universidade Industrial de Santander, Colômbia, 2004-2009</p>
-                         <p class="mt-2 bg-teal-50 text-teal-700 inline-block py-1 px-3 rounded-full text-sm font-semibold">🏆 Estudante Distinto</p>
-                    </div>
-                </div>
+                <h2 id="education-title" class="text-3xl font-bold text-teal-600 border-b-2 border-teal-200 pb-2 mb-8"></h2>
+                <p id="education-intro" class="mb-8 text-stone-600"></p>
+                <div id="education-container" class="space-y-6"></div>
             </section>
             
             <section id="publicacoes" class="scroll-mt-24">
-                <h2 class="text-3xl font-bold text-teal-600 border-b-2 border-teal-200 pb-2 mb-8">Publicações</h2>
-                 <p class="mb-8 text-stone-600">Minhas contribuições para a comunidade científica incluem múltiplos artigos em periódicos de alto impacto e apresentações em congressos internacionais. Você pode explorar minhas publicações em detalhe através dos links para meus perfis acadêmicos.</p>
+                <h2 id="publications-title" class="text-3xl font-bold text-teal-600 border-b-2 border-teal-200 pb-2 mb-8"></h2>
+                 <p id="publications-intro" class="mb-8 text-stone-600"></p>
                 <div class="bg-white p-8 rounded-lg shadow-md">
-                    <p class="text-lg mb-4">Autor de **11 artigos completos** publicados em periódicos internacionais revisados por pares (9 na categoria A1 e 2 na A2, segundo Capes) e **11 trabalhos completos** em anais de congressos.</p>
+                    <p id="publications-summary" class="text-lg mb-4"></p>
                     <div class="flex flex-wrap gap-4 mt-6">
-                        <a href="https://scholar.google.com.br/citations?hl=en&user=KejLXuAAAAAJ" target="_blank" class="bg-stone-200 hover:bg-stone-300 text-stone-800 font-medium py-2 px-4 rounded-full transition-all duration-300">Google Scholar</a>
-                        <a href="https://www.researchgate.net/profile/Julio-Rueda-Cordero" target="_blank" class="bg-stone-200 hover:bg-stone-300 text-stone-800 font-medium py-2 px-4 rounded-full transition-all duration-300">ResearchGate</a>
-                        <a href="https://orcid.org/0000-0003-3199-7408" target="_blank" class="bg-stone-200 hover:bg-stone-300 text-stone-800 font-medium py-2 px-4 rounded-full transition-all duration-300">Orcid</a>
+                        <a href="https://scholar.google.com.br/citations?hl=en&user=KejLXuAAAAAJ" target="_blank" id="publications-scholar" class="bg-stone-200 hover:bg-stone-300 text-stone-800 font-medium py-2 px-4 rounded-full transition-all duration-300"></a>
+                        <a href="https://www.researchgate.net/profile/Julio-Rueda-Cordero" target="_blank" id="publications-researchgate" class="bg-stone-200 hover:bg-stone-300 text-stone-800 font-medium py-2 px-4 rounded-full transition-all duration-300"></a>
+                        <a href="https://orcid.org/0000-0003-3199-7408" target="_blank" id="publications-orcid" class="bg-stone-200 hover:bg-stone-300 text-stone-800 font-medium py-2 px-4 rounded-full transition-all duration-300"></a>
                     </div>
                 </div>
             </section>
@@ -202,202 +189,456 @@
     </div>
 
 <script>
-    const appData = {
-        experience: [
-            {
-                role: 'Pesquisador, Especialista II',
-                company: 'TECGRAF PUC-RIO, BRASIL',
-                period: '03/2017 – Atualmente',
-                details: [
-                    'Liderança no desenvolvimento e implementação de metodologias em C++/Lua (GeMA) e Fortran (Abaqus).',
-                    'Foco na otimização de simulações geomecânicas e de fluxo de fluidos em formações rochosas.',
-                    'Desenvolvimento de modelos multifísicos com impacto direto na integridade estrutural de projetos.',
-                    'Autor de múltiplos relatórios técnicos e artigos científicos.'
-                ]
-            },
-            {
-                role: 'Professor Assistente',
-                company: 'UNIVERSIDADE INDUSTRIAL DE SANTANDER, COLÔMBIA',
-                period: '11/2016 – 02/2017',
-                details: [
-                    'Pesquisa aplicada em campos colombianos em parceria estratégica com a Ecopetrol.',
-                    'Desenvolvimento de workflows inovadores para problemas geomecânicos complexos.',
-                    'Foco na otimização de processos e na segurança operacional.'
-                ]
-            },
-            {
-                role: 'Engenheiro de Pesquisa',
-                company: 'UT NATFRAC DTH COLOMBIA',
-                period: '04/2015 – 06/2015',
-                details: [
-                    'Construção de modelo geomecânico para análise de propagação de fraturas.',
-                    'Análise de estimulação hidráulica em reservatórios não convencionais para otimização da produção de petróleo.'
-                ]
-            },
-            {
-                role: 'Consultor Especialista',
-                company: 'UNION TEMPORAL UP CONSULTORIA-COLOMBIA',
-                period: '09/2014 – 11/2014',
-                details: [
-                    'Modelagem numérica da estabilidade de falhas geológicas para um campo da Ecopetrol.',
-                    'Estudo dos efeitos de processos de injeção em falhas criticamente estressadas para garantir a segurança operacional.'
-                ]
-            }
-        ],
-        projects: [
-            {
-                title: 'Estabilidade de Poços de Petróleo',
-                category: 'petroleo',
-                description: 'Desenvolvimento de modelos para prever e garantir a estabilidade de poços durante a perfuração e produção, reduzindo riscos operacionais.'
-            },
-            {
-                title: 'Análise de Estabilidade de Taludes',
-                category: 'mineracao',
-                description: 'Simulações avançadas para avaliar a estabilidade de taludes em minas a céu aberto, otimizando o ângulo de escavação e garantindo a segurança.'
-            },
-            {
-                title: 'Fraturamento Hidráulico (Fracking)',
-                category: 'petroleo',
-                description: 'Modelagem da propagação de fraturas e sua interação com fraturas naturais para maximizar a extração de hidrocarbonetos de reservatórios não convencionais.'
-            },
-            {
-                title: 'Segurança de Barragens de Rejeitos',
-                category: 'mineracao',
-                description: 'Análise geomecânica da integridade estrutural de barragens de rejeitos, aplicando modelos multifísicos para avaliar riscos de liquefação e ruptura.'
-            },
-            {
-                title: 'Ativação de Falhas Geológicas',
-                category: 'petroleo',
-                description: 'Estudo dos efeitos de injeção de fluidos em falhas geológicas para mitigar riscos de sismicidade induzida e garantir a segurança de campos de petróleo.'
-            },
-            {
-                title: 'Análise de Subsidência',
-                category: 'mineracao',
-                description: 'Modelagem e previsão da subsidência do terreno causada por atividades de mineração subterrânea, planejando medidas de mitigação.'
-            }
-        ]
-    };
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const timelineContainer = document.getElementById('timeline-container');
-        appData.experience.forEach(item => {
-            const div = document.createElement('div');
-            div.className = 'timeline-item mb-8 pl-8 relative cursor-pointer';
-            div.innerHTML = `
-                <div class="timeline-dot"></div>
-                <h3 class="font-bold text-xl">${item.role}</h3>
-                <p class="text-teal-600 font-medium">${item.company}</p>
-                <p class="text-sm text-stone-500 mb-2">${item.period}</p>
-                <ul class="details hidden pl-4 border-l-2 border-teal-100 space-y-1 mt-2 text-stone-600">
-                    ${item.details.map(d => `<li>- ${d}</li>`).join('')}
-                </ul>
-            `;
-            timelineContainer.appendChild(div);
-        });
-        
-        document.querySelectorAll('.timeline-item').forEach(item => {
-            item.addEventListener('click', () => {
-                item.querySelector('.details').classList.toggle('hidden');
-            });
-        });
-
-        const projectsGrid = document.getElementById('projects-grid');
-        const renderProjects = (filter) => {
-            projectsGrid.innerHTML = '';
-            const filteredProjects = filter === 'all' ? appData.projects : appData.projects.filter(p => p.category === filter);
-            filteredProjects.forEach(p => {
-                const card = document.createElement('div');
-                card.className = 'project-card bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105';
-                card.innerHTML = `
-                    <div class="mb-2"><span class="text-xs font-semibold uppercase px-2 py-1 rounded-full ${p.category === 'petroleo' ? 'bg-blue-100 text-blue-800' : 'bg-green-100 text-green-800'}">${p.category === 'petroleo' ? 'Petróleo & Gás' : 'Mineração'}</span></div>
-                    <h3 class="font-bold text-xl mb-2 text-stone-700">${p.title}</h3>
-                    <p class="text-stone-600">${p.description}</p>
-                `;
-                projectsGrid.appendChild(card);
-            });
-        };
-        renderProjects('all');
-
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('bg-teal-500', 'text-white'));
-                filterBtns.forEach(b => b.classList.add('bg-stone-200', 'text-stone-800'));
-                btn.classList.add('bg-teal-500', 'text-white');
-                btn.classList.remove('bg-stone-200', 'text-stone-800');
-                renderProjects(btn.dataset.filter);
-            });
-        });
-
-        const ctx = document.getElementById('skillsChart').getContext('2d');
-        const skillsChart = new Chart(ctx, {
-            type: 'radar',
-            data: {
-                labels: ['Abaqus', 'GeMA', 'Python', 'Fortran', 'C++', 'MATLAB', 'Lua'],
-                datasets: [{
-                    label: 'Proficiência Técnica',
-                    data: [90, 85, 80, 95, 75, 85, 80],
-                    backgroundColor: 'rgba(20, 184, 166, 0.2)',
-                    borderColor: 'rgba(13, 148, 136, 1)',
-                    borderWidth: 2,
-                    pointBackgroundColor: 'rgba(13, 148, 136, 1)',
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: 'rgba(13, 148, 136, 1)'
-                }]
-            },
-            options: {
-                maintainAspectRatio: false,
-                scales: {
-                    r: {
-                        angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
-                        grid: { color: 'rgba(0, 0, 0, 0.1)' },
-                        pointLabels: { font: { size: 14 } },
-                        suggestedMin: 0,
-                        suggestedMax: 100,
-                        ticks: {
-                           backdropColor: 'rgba(255, 255, 255, 0.75)',
-                           stepSize: 20
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: false
-                    }
-                }
-            }
-        });
-
-        const menuButton = document.getElementById('menu-button');
-        const mobileNav = document.getElementById('mobile-nav');
-        menuButton.addEventListener('click', () => {
-            mobileNav.classList.toggle('hidden');
-        });
-
-        const sections = document.querySelectorAll('section');
-        const navLinksDesktop = document.querySelectorAll('#desktop-nav a');
-        const navLinksMobile = document.querySelectorAll('#mobile-nav a');
-
-        function changeNav(links) {
-            let index = sections.length;
-            while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
-            
-            links.forEach((link) => link.classList.remove('active-nav'));
-            if (links[index]) {
-               links[index].classList.add('active-nav');
-            }
+const translations = {
+    pt: {
+        title: "Currículo Interativo | Julio Rueda",
+        jobTitle: "Engenheiro Geotécnico",
+        footerTitle: "Currículo Interativo",
+        nav: {
+            profile: "Perfil",
+            experience: "Experiência",
+            skills: "Competências",
+            projects: "Projetos Relevantes",
+            education: "Formação e Prêmios",
+            publications: "Publicações",
+        },
+        profile: {
+            title: "Perfil Profissional",
+            p1: "Doutor e Mestre em Engenharia Civil (Geotecnia) pela PUC-Rio e Engenheiro Civil pela Universidade Industrial de Santander. Sou um especialista em Geomecânica Computacional com vasta experiência no desenvolvimento e aplicação de modelos numéricos robustos para simulação avançada de problemas multifísicos em rochas e solos.",
+            p2: "Minha expertise é focada em desafios complexos nos setores de Mineração (estabilidade de taludes, barragens, subsidência) e Petróleo & Gás (ativação de falhas, estabilidade de poços, fraturamento hidráulico). Busco aplicar soluções inovadoras para otimizar processos e garantir a integridade estrutural em projetos de alta complexidade.",
+            email: "✉️ E-mail",
+            lattes: "📄 Lattes"
+        },
+        experience: {
+            title: "Experiência Profissional",
+            intro: "Esta seção detalha minha trajetória profissional, focada em pesquisa aplicada, desenvolvimento e consultoria em geomecânica. Clique em cada cargo para ver mais detalhes sobre as responsabilidades e contribuições em cada posição.",
+            data: [
+                { role: 'Pesquisador, Especialista II', company: 'TECGRAF PUC-RIO, BRASIL', period: '03/2017 – Atualmente', details: ['Liderança no desenvolvimento e implementação de metodologias em C++/Lua (GeMA) e Fortran (Abaqus).', 'Foco na otimização de simulações geomecânicas e de fluxo de fluidos em formações rochosas.', 'Desenvolvimento de modelos multifísicos com impacto direto na integridade estrutural de projetos.', 'Autor de múltiplos relatórios técnicos e artigos científicos.'] },
+                { role: 'Professor Assistente', company: 'UNIVERSIDADE INDUSTRIAL DE SANTANDER, COLÔMBIA', period: '11/2016 – 02/2017', details: ['Pesquisa aplicada em campos colombianos em parceria estratégica com a Ecopetrol.', 'Desenvolvimento de workflows inovadores para problemas geomecânicos complexos.', 'Foco na otimização de processos e na segurança operacional.'] },
+                { role: 'Engenheiro de Pesquisa', company: 'UT NATFRAC DTH COLOMBIA', period: '04/2015 – 06/2015', details: ['Construção de modelo geomecânico para análise de propagação de fraturas.', 'Análise de estimulação hidráulica em reservatórios não convencionais para otimização da produção de petróleo.'] },
+                { role: 'Consultor Especialista', company: 'UNION TEMPORAL UP CONSULTORIA-COLOMBIA', period: '09/2014 – 11/2014', details: ['Modelagem numérica da estabilidade de falhas geológicas para um campo da Ecopetrol.', 'Estudo dos efeitos de processos de injeção em falhas criticamente estressadas para garantir a segurança operacional.'] }
+            ]
+        },
+        skills: {
+            title: "Competências Técnicas",
+            intro: "Aqui apresento minhas principais competências, desde a análise geotécnica até a programação e uso de softwares especializados. O gráfico de radar ilustra minha proficiência nas principais ferramentas de software e linguagens de programação que utilizo para desenvolver soluções geomecânicas avançadas.",
+            areasTitle: "Áreas de Atuação",
+            areas: ["Análise Geotécnica Avançada", "Modelagem Numérica (FEM, DEM, FDM)", "Geomecânica para Petróleo e Gás", "Geotecnia de Mineração", "Estabilidade de Estruturas Geotécnicas", "Propagação de Fraturas Hidráulicas"],
+            languagesTitle: "Idiomas",
+            languages: ["<span class='font-semibold'>Espanhol:</span> Nativo", "<span class='font-semibold'>Português:</span> Fluente", "<span class='font-semibold'>Inglês:</span> Fluente"],
+            softwareTitle: "Software e Programação",
+            chartLabel: "Proficiência Técnica"
+        },
+        projects: {
+            title: "Projetos Relevantes",
+            intro: "Explore uma seleção de projetos que demonstram a aplicação prática da minha expertise em geomecânica. Use os filtros para visualizar projetos específicos dos setores de Petróleo & Gás ou Mineração, e veja como minhas contribuições levaram a resultados como otimização de produção e garantia de segurança operacional.",
+            filters: { all: "Todos", petroleo: "Petróleo & Gás", mineracao: "Mineração" },
+            categories: { petroleo: "Petróleo & Gás", mineracao: "Mineração" },
+            data: [
+                { title: 'Estabilidade de Poços de Petróleo', category: 'petroleo', description: 'Desenvolvimento de modelos para prever e garantir a estabilidade de poços durante a perfuração e produção, reduzindo riscos operacionais.' },
+                { title: 'Análise de Estabilidade de Taludes', category: 'mineracao', description: 'Simulações avançadas para avaliar a estabilidade de taludes em minas a céu aberto, otimizando o ângulo de escavação e garantindo a segurança.' },
+                { title: 'Fraturamento Hidráulico (Fracking)', category: 'petroleo', description: 'Modelagem da propagação de fraturas e sua interação com fraturas naturais para maximizar a extração de hidrocarbonetos de reservatórios não convencionais.' },
+                { title: 'Segurança de Barragens de Rejeitos', category: 'mineracao', description: 'Análise geomecânica da integridade estrutural de barragens de rejeitos, aplicando modelos multifísicos para avaliar riscos de liquefação e ruptura.' },
+                { title: 'Ativação de Falhas Geológicas', category: 'petroleo', description: 'Estudo dos efeitos de injeção de fluidos em falhas geológicas para mitigar riscos de sismicidade induzida e garantir a segurança de campos de petróleo.' },
+                { title: 'Análise de Subsidência', category: 'mineracao', description: 'Modelagem e previsão da subsidência do terreno causada por atividades de mineração subterrânea, planejando medidas de mitigação.' }
+            ]
+        },
+        education: {
+            title: "Formação e Prêmios",
+            intro: "Esta seção destaca minha formação acadêmica e os reconhecimentos recebidos, que refletem a excelência e o impacto da minha pesquisa e trabalho acadêmico no campo da engenharia geotécnica.",
+            data: [
+                { degree: "Doutor em Engenharia Civil (D.Sc.)", institution: "Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), 2017-2021", award: "🏆 Prêmio CAPES de Tese Edição 2022 & FAPERJ Nota 10" },
+                { degree: "Mestrado em Engenharia Civil (M.Sc.)", institution: "Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), 2010-2013", award: "🏆 FAPERJ Nota 10" },
+                { degree: "Graduação em Engenharia Civil", institution: "Universidade Industrial de Santander, Colômbia, 2004-2009", award: "🏆 Estudante Distinto" }
+            ]
+        },
+        publications: {
+            title: "Publicações",
+            intro: "Minhas contribuições para a comunidade científica incluem múltiplos artigos em periódicos de alto impacto e apresentações em congressos internacionais. Você pode explorar minhas publicações em detalhe através dos links para meus perfis acadêmicos.",
+            summary: "Autor de <strong>11 artigos completos</strong> publicados em periódicos internacionais revisados por pares (9 na categoria A1 e 2 na A2, segundo Capes) e <strong>11 trabalhos completos</strong> em anais de congressos.",
+            scholar: "Google Scholar",
+            researchgate: "ResearchGate",
+            orcid: "Orcid"
         }
-        
-        window.addEventListener('scroll', () => {
-            changeNav(navLinksDesktop);
-            changeNav(navLinksMobile);
-        });
+    },
+    es: {
+        title: "Currículum Interactivo | Julio Rueda",
+        jobTitle: "Ingeniero Geotécnico",
+        footerTitle: "Currículum Interactivo",
+        nav: {
+            profile: "Perfil",
+            experience: "Experiencia",
+            skills: "Competencias",
+            projects: "Proyectos Relevantes",
+            education: "Formación y Premios",
+            publications: "Publicaciones",
+        },
+        profile: {
+            title: "Perfil Profesional",
+            p1: "Doctor y Máster en Ingeniería Civil (Geotecnia) por la PUC-Rio e Ingeniero Civil por la Universidad Industrial de Santander. Soy un especialista en Geomecánica Computacional con vasta experiencia en el desarrollo y aplicación de modelos numéricos robustos para la simulación avanzada de problemas multifísicos en rocas y suelos.",
+            p2: "Mi experiencia se centra en desafíos complejos en los sectores de Minería (estabilidad de taludes, presas, subsidencia) y Petróleo y Gas (activación de fallas, estabilidad de pozos, fracturamiento hidráulico). Busco aplicar soluciones innovadoras para optimizar procesos y garantizar la integridad estructural en proyectos de alta complejidad.",
+            email: "✉️ Correo Electrónico",
+            lattes: "📄 Lattes"
+        },
+        experience: {
+            title: "Experiencia Profesional",
+            intro: "Esta sección detalla mi trayectoria profesional, enfocada en investigación aplicada, desarrollo y consultoría en geomecánica. Haga clic en cada cargo para ver más detalles sobre las responsabilidades y contribuciones en cada posición.",
+            data: [
+                { role: 'Investigador, Especialista II', company: 'TECGRAF PUC-RIO, BRASIL', period: '03/2017 – Actualmente', details: ['Liderazgo en el desarrollo e implementación de metodologías en C++/Lua (GeMA) y Fortran (Abaqus).', 'Enfoque en la optimización de simulaciones geomecánicas y de flujo de fluidos en formaciones rocosas.', 'Desarrollo de modelos multifísicos con impacto directo en la integridad estructural de proyectos.', 'Autor de múltiples informes técnicos y artículos científicos.'] },
+                { role: 'Profesor Asistente', company: 'UNIVERSIDAD INDUSTRIAL DE SANTANDER, COLOMBIA', period: '11/2016 – 02/2017', details: ['Investigación aplicada en campos colombianos en alianza estratégica con Ecopetrol.', 'Desarrollo de flujos de trabajo innovadores para problemas geomecánicos complejos.', 'Enfoque en la optimización de procesos y la seguridad operacional.'] },
+                { role: 'Ingeniero de Investigación', company: 'UT NATFRAC DTH COLOMBIA', period: '04/2015 – 06/2015', details: ['Construcción de modelo geomecánico para análisis de propagación de fracturas.', 'Análisis de estimulación hidráulica en yacimientos no convencionales para optimizar la producción de petróleo.'] },
+                { role: 'Consultor Especialista', company: 'UNION TEMPORAL UP CONSULTORIA-COLOMBIA', period: '09/2014 – 11/2014', details: ['Modelado numérico de la estabilidad de fallas geológicas para un campo de Ecopetrol.', 'Estudio de los efectos de procesos de inyección en fallas críticamente estresadas para garantizar la seguridad operacional.'] }
+            ]
+        },
+        skills: {
+            title: "Competencias Técnicas",
+            intro: "Aquí presento mis principales competencias, desde el análisis geotécnico hasta la programación y el uso de software especializado. El gráfico de radar ilustra mi dominio en las principales herramientas de software y lenguajes de programación que utilizo para desarrollar soluciones geomecánicas avanzadas.",
+            areasTitle: "Áreas de Actuación",
+            areas: ["Análisis Geotécnico Avanzado", "Modelado Numérico (FEM, DEM, FDM)", "Geomecánica para Petróleo y Gas", "Geotecnia de Minería", "Estabilidad de Estructuras Geotécnicas", "Propagación de Fracturas Hidráulicas"],
+            languagesTitle: "Idiomas",
+            languages: ["<span class='font-semibold'>Español:</span> Nativo", "<span class='font-semibold'>Portugués:</span> Fluido", "<span class='font-semibold'>Inglés:</span> Fluido"],
+            softwareTitle: "Software y Programación",
+            chartLabel: "Competencia Técnica"
+        },
+        projects: {
+            title: "Proyectos Relevantes",
+            intro: "Explore una selección de proyectos que demuestran la aplicación práctica de mi experiencia en geomecánica. Use los filtros para visualizar proyectos específicos de los sectores de Petróleo y Gas o Minería, y vea cómo mis contribuciones llevaron a resultados como la optimización de la producción y la garantía de la seguridad operacional.",
+            filters: { all: "Todos", petroleo: "Petróleo y Gas", mineracao: "Minería" },
+            categories: { petroleo: "Petróleo y Gas", mineracao: "Minería" },
+            data: [
+                { title: 'Estabilidad de Pozos Petroleros', category: 'petroleo', description: 'Desarrollo de modelos para predecir y garantizar la estabilidad de pozos durante la perforación y producción, reduciendo riesgos operativos.' },
+                { title: 'Análisis de Estabilidad de Taludes', category: 'mineracao', description: 'Simulaciones avanzadas para evaluar la estabilidad de taludes en minas a cielo abierto, optimizando el ángulo de excavación y garantizando la seguridad.' },
+                { title: 'Fracturamiento Hidráulico (Fracking)', category: 'petroleo', description: 'Modelado de la propagación de fracturas y su interacción con fracturas naturales para maximizar la extracción de hidrocarburos de yacimientos no convencionales.' },
+                { title: 'Seguridad de Presas de Relaves', category: 'mineracao', description: 'Análisis geomecánico de la integridad estructural de presas de relaves, aplicando modelos multifísicos para evaluar riesgos de licuefacción y ruptura.' },
+                { title: 'Activación de Fallas Geológicas', category: 'petroleo', description: 'Estudio de los efectos de la inyección de fluidos en fallas geológicas para mitigar riesgos de sismicidad inducida y garantizar la seguridad de campos petroleros.' },
+                { title: 'Análisis de Subsidencia', category: 'mineracao', description: 'Modelado y predicción de la subsidencia del terreno causada por actividades de minería subterránea, planificando medidas de mitigación.' }
+            ]
+        },
+        education: {
+            title: "Formación y Premios",
+            intro: "Esta sección destaca mi formación académica y los reconocimientos recibidos, que reflejan la excelencia y el impacto de mi investigación y trabajo académico en el campo de la ingeniería geotécnica.",
+            data: [
+                { degree: "Doctor en Ingeniería Civil (D.Sc.)", institution: "Pontificia Universidad Católica de Río de Janeiro (PUC-Rio), 2017-2021", award: "🏆 Premio CAPES de Tesis Edición 2022 & FAPERJ Nota 10" },
+                { degree: "Máster en Ingeniería Civil (M.Sc.)", institution: "Pontificia Universidad Católica de Río de Janeiro (PUC-Rio), 2010-2013", award: "🏆 FAPERJ Nota 10" },
+                { degree: "Grado en Ingeniería Civil", institution: "Universidad Industrial de Santander, Colombia, 2004-2009", award: "🏆 Estudiante Distinguido" }
+            ]
+        },
+        publications: {
+            title: "Publicaciones",
+            intro: "Mis contribuciones a la comunidad científica incluyen múltiples artículos en revistas de alto impacto y presentaciones en congresos internacionales. Puede explorar mis publicaciones en detalle a través de los enlaces a mis perfiles académicos.",
+            summary: "Autor de <strong>11 artículos completos</strong> publicados en revistas internacionales revisadas por pares (9 en la categoría A1 y 2 en A2, según Capes) y <strong>11 trabajos completos</strong> en actas de congresos.",
+            scholar: "Google Scholar",
+            researchgate: "ResearchGate",
+            orcid: "Orcid"
+        }
+    },
+    en: {
+        title: "Interactive CV | Julio Rueda",
+        jobTitle: "Geotechnical Engineer",
+        footerTitle: "Interactive CV",
+        nav: {
+            profile: "Profile",
+            experience: "Experience",
+            skills: "Skills",
+            projects: "Relevant Projects",
+            education: "Education & Awards",
+            publications: "Publications",
+        },
+        profile: {
+            title: "Professional Profile",
+            p1: "Ph.D. and M.Sc. in Civil Engineering (Geotechnics) from PUC-Rio and Civil Engineer from the Industrial University of Santander. I am a specialist in Computational Geomechanics with extensive experience in developing and applying robust numerical models for advanced simulation of multiphysics problems in rocks and soils.",
+            p2: "My expertise is focused on complex challenges in the Mining (slope stability, dams, subsidence) and Oil & Gas (fault activation, wellbore stability, hydraulic fracturing) sectors. I aim to apply innovative solutions to optimize processes and ensure structural integrity in highly complex projects.",
+            email: "✉️ Email",
+            lattes: "📄 Lattes CV"
+        },
+        experience: {
+            title: "Professional Experience",
+            intro: "This section details my professional journey, focused on applied research, development, and consulting in geomechanics. Click on each role to see more details about the responsibilities and contributions in each position.",
+            data: [
+                { role: 'Researcher, Specialist II', company: 'TECGRAF PUC-RIO, BRAZIL', period: '03/2017 – Present', details: ['Led the development and implementation of methodologies in C++/Lua (GeMA) and Fortran (Abaqus).', 'Focused on optimizing geomechanical and fluid flow simulations in rock formations.', 'Developed multiphysics models with a direct impact on the structural integrity of projects.', 'Authored multiple technical reports and scientific articles.'] },
+                { role: 'Assistant Professor', company: 'INDUSTRIAL UNIVERSITY OF SANTANDER, COLOMBIA', period: '11/2016 – 02/2017', details: ['Conducted applied research in Colombian fields in a strategic partnership with Ecopetrol.', 'Developed innovative workflows for complex geomechanical problems.', 'Focused on process optimization and operational safety.'] },
+                { role: 'Research Engineer', company: 'UT NATFRAC DTH COLOMBIA', period: '04/2015 – 06/2015', details: ['Built a geomechanical model for fracture propagation analysis.', 'Analyzed hydraulic stimulation in unconventional reservoirs to optimize oil production.'] },
+                { role: 'Specialist Consultant', company: 'UNION TEMPORAL UP CONSULTORIA-COLOMBIA', period: '09/2014 – 11/2014', details: ['Performed numerical modeling of geological fault stability for an Ecopetrol field.', 'Studied the effects of injection processes on critically stressed faults to ensure operational safety.'] }
+            ]
+        },
+        skills: {
+            title: "Technical Skills",
+            intro: "Here, I present my main skills, from geotechnical analysis to programming and the use of specialized software. The radar chart illustrates my proficiency in the main software tools and programming languages I use to develop advanced geomechanical solutions.",
+            areasTitle: "Areas of Expertise",
+            areas: ["Advanced Geotechnical Analysis", "Numerical Modeling (FEM, DEM, FDM)", "Geomechanics for Oil & Gas", "Mining Geotechnics", "Stability of Geotechnical Structures", "Hydraulic Fracture Propagation"],
+            languagesTitle: "Languages",
+            languages: ["<span class='font-semibold'>Spanish:</span> Native", "<span class='font-semibold'>Portuguese:</span> Fluent", "<span class='font-semibold'>English:</span> Fluent"],
+            softwareTitle: "Software & Programming",
+            chartLabel: "Technical Proficiency"
+        },
+        projects: {
+            title: "Relevant Projects",
+            intro: "Explore a selection of projects that demonstrate the practical application of my expertise in geomechanics. Use the filters to view specific projects from the Oil & Gas or Mining sectors, and see how my contributions led to results such as production optimization and operational safety assurance.",
+            filters: { all: "All", petroleo: "Oil & Gas", mineracao: "Mining" },
+            categories: { petroleo: "Oil & Gas", mineracao: "Mining" },
+            data: [
+                { title: 'Oil Wellbore Stability', category: 'petroleo', description: 'Developing models to predict and ensure the stability of wells during drilling and production, reducing operational risks.' },
+                { title: 'Slope Stability Analysis', category: 'mineracao', description: 'Advanced simulations to assess the stability of slopes in open-pit mines, optimizing excavation angles and ensuring safety.' },
+                { title: 'Hydraulic Fracturing (Fracking)', category: 'petroleo', description: 'Modeling fracture propagation and its interaction with natural fractures to maximize hydrocarbon extraction from unconventional reservoirs.' },
+                { title: 'Tailings Dam Safety', category: 'mineracao', description: 'Geomechanical analysis of the structural integrity of tailings dams, applying multiphysics models to assess liquefaction and failure risks.' },
+                { title: 'Geological Fault Activation', category: 'petroleo', description: 'Studying the effects of fluid injection on geological faults to mitigate risks of induced seismicity and ensure the safety of oil fields.' },
+                { title: 'Subsidence Analysis', category: 'mineracao', description: 'Modeling and predicting land subsidence caused by underground mining activities, planning mitigation measures.' }
+            ]
+        },
+        education: {
+            title: "Education & Awards",
+            intro: "This section highlights my academic background and the recognitions I have received, reflecting the excellence and impact of my research and academic work in the field of geotechnical engineering.",
+            data: [
+                { degree: "Doctor of Science (D.Sc.) in Civil Engineering", institution: "Pontifical Catholic University of Rio de Janeiro (PUC-Rio), 2017-2021", award: "🏆 CAPES Thesis Award 2022 Edition & FAPERJ Grade 10" },
+                { degree: "Master of Science (M.Sc.) in Civil Engineering", institution: "Pontifical Catholic University of Rio de Janeiro (PUC-Rio), 2010-2013", award: "🏆 FAPERJ Grade 10" },
+                { degree: "Bachelor of Science in Civil Engineering", institution: "Industrial University of Santander, Colombia, 2004-2009", award: "🏆 Distinguished Student" }
+            ]
+        },
+        publications: {
+            title: "Publications",
+            intro: "My contributions to the scientific community include multiple articles in high-impact journals and presentations at international conferences. You can explore my publications in detail through the links to my academic profiles.",
+            summary: "Author of <strong>11 full articles</strong> published in peer-reviewed international journals (9 in category A1 and 2 in A2, according to Capes) and <strong>11 full papers</strong> in conference proceedings.",
+            scholar: "Google Scholar",
+            researchgate: "ResearchGate",
+            orcid: "Orcid"
+        }
+    }
+};
 
-        mobileNav.addEventListener('click', () => {
-             mobileNav.classList.add('hidden');
+let skillsChart;
+
+function updateContent(lang) {
+    const content = translations[lang];
+
+    document.documentElement.lang = lang;
+    document.title = content.title;
+    
+    // Simple text elements
+    document.getElementById('aside-job-title').textContent = content.jobTitle;
+    document.getElementById('header-job-title').textContent = content.jobTitle;
+    document.getElementById('aside-footer-title').textContent = content.footerTitle;
+    
+    // Navigation
+    document.querySelectorAll('#desktop-nav a, #mobile-nav a').forEach(el => {
+        const key = el.dataset.nav;
+        el.textContent = content.nav[key];
+        el.className = 'block py-2 px-4 rounded-md transition-all duration-300 hover:bg-teal-500 hover:text-white';
+    });
+
+    // Profile
+    document.getElementById('profile-title').textContent = content.profile.title;
+    document.getElementById('profile-p1').innerHTML = content.profile.p1;
+    document.getElementById('profile-p2').innerHTML = content.profile.p2;
+    document.getElementById('profile-email').innerHTML = content.profile.email;
+    document.getElementById('profile-lattes').innerHTML = content.profile.lattes;
+
+    // Experience
+    document.getElementById('experience-title').textContent = content.experience.title;
+    document.getElementById('experience-intro').textContent = content.experience.intro;
+    const timelineContainer = document.getElementById('timeline-container');
+    timelineContainer.innerHTML = '';
+    content.experience.data.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'timeline-item mb-8 pl-8 relative cursor-pointer';
+        div.innerHTML = `
+            <div class="timeline-dot"></div>
+            <h3 class="font-bold text-xl">${item.role}</h3>
+            <p class="text-teal-600 font-medium">${item.company}</p>
+            <p class="text-sm text-stone-500 mb-2">${item.period}</p>
+            <ul class="details hidden pl-4 border-l-2 border-teal-100 space-y-1 mt-2 text-stone-600">
+                ${item.details.map(d => `<li>- ${d}</li>`).join('')}
+            </ul>
+        `;
+        timelineContainer.appendChild(div);
+    });
+    document.querySelectorAll('.timeline-item').forEach(item => {
+        item.addEventListener('click', () => {
+            item.querySelector('.details').classList.toggle('hidden');
         });
     });
+
+    // Skills
+    document.getElementById('skills-title').textContent = content.skills.title;
+    document.getElementById('skills-intro').textContent = content.skills.intro;
+    document.getElementById('skills-areas-title').textContent = content.skills.areasTitle;
+    const areasList = document.getElementById('skills-areas-list');
+    areasList.innerHTML = '';
+    content.skills.areas.forEach(item => {
+        const li = document.createElement('li');
+        li.innerHTML = item;
+        areasList.appendChild(li);
+    });
+    document.getElementById('skills-languages-title').textContent = content.skills.languagesTitle;
+    const languagesList = document.getElementById('skills-languages-list');
+    languagesList.innerHTML = '';
+    content.skills.languages.forEach(item => {
+        const li = document.createElement('li');
+        li.innerHTML = item;
+        languagesList.appendChild(li);
+    });
+    document.getElementById('skills-software-title').textContent = content.skills.softwareTitle;
+
+    // Chart update
+    if (skillsChart) {
+        skillsChart.data.datasets[0].label = content.skills.chartLabel;
+        skillsChart.update();
+    }
+    
+    // Projects
+    document.getElementById('projects-title').textContent = content.projects.title;
+    document.getElementById('projects-intro').textContent = content.projects.intro;
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        const filter = btn.dataset.filter;
+        btn.textContent = content.projects.filters[filter];
+    });
+    renderProjects(lang, 'all');
+
+    // Education
+    document.getElementById('education-title').textContent = content.education.title;
+    document.getElementById('education-intro').textContent = content.education.intro;
+    const educationContainer = document.getElementById('education-container');
+    educationContainer.innerHTML = '';
+    content.education.data.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'bg-white p-6 rounded-lg shadow-md';
+        div.innerHTML = `
+            <h3 class="font-bold text-xl text-stone-700">${item.degree}</h3>
+            <p class="text-teal-600">${item.institution}</p>
+            <p class="mt-2 bg-teal-50 text-teal-700 inline-block py-1 px-3 rounded-full text-sm font-semibold">${item.award}</p>
+        `;
+        educationContainer.appendChild(div);
+    });
+    
+    // Publications
+    document.getElementById('publications-title').textContent = content.publications.title;
+    document.getElementById('publications-intro').textContent = content.publications.intro;
+    document.getElementById('publications-summary').innerHTML = content.publications.summary;
+    document.getElementById('publications-scholar').textContent = content.publications.scholar;
+    document.getElementById('publications-researchgate').textContent = content.publications.researchgate;
+    document.getElementById('publications-orcid').textContent = content.publications.orcid;
+
+    // Update active language switcher
+    document.querySelectorAll('.lang-switcher a').forEach(a => {
+        a.classList.remove('active');
+        if (a.dataset.lang === lang) {
+            a.classList.add('active');
+        }
+    });
+
+    // Reset active filter button style
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(b => b.classList.remove('bg-teal-500', 'text-white'));
+    filterBtns.forEach(b => b.classList.add('bg-stone-200', 'text-stone-800'));
+    document.querySelector('.filter-btn[data-filter="all"]').classList.add('bg-teal-500', 'text-white');
+    document.querySelector('.filter-btn[data-filter="all"]').classList.remove('bg-stone-200', 'text-stone-800');
+}
+
+function renderProjects(lang, filter) {
+    const projectsGrid = document.getElementById('projects-grid');
+    const content = translations[lang].projects;
+    projectsGrid.innerHTML = '';
+    const filteredProjects = filter === 'all' ? content.data : content.data.filter(p => p.category === filter);
+
+    filteredProjects.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'project-card bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105';
+        const categoryLabel = content.categories[p.category];
+        card.innerHTML = `
+            <div class="mb-2">
+                <span class="text-xs font-semibold uppercase px-2 py-1 rounded-full ${p.category === 'petroleo' ? 'bg-blue-100 text-blue-800' : 'bg-green-100 text-green-800'}">
+                    ${categoryLabel}
+                </span>
+            </div>
+            <h3 class="font-bold text-xl mb-2 text-stone-700">${p.title}</h3>
+            <p class="text-stone-600">${p.description}</p>
+        `;
+        projectsGrid.appendChild(card);
+    });
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Initial chart setup
+    const ctx = document.getElementById('skillsChart').getContext('2d');
+    skillsChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ['Abaqus', 'GeMA', 'Python', 'Fortran', 'C++', 'MATLAB', 'Lua'],
+            datasets: [{
+                label: '', // Will be set by updateContent
+                data: [90, 85, 80, 95, 75, 85, 80],
+                backgroundColor: 'rgba(20, 184, 166, 0.2)',
+                borderColor: 'rgba(13, 148, 136, 1)',
+                borderWidth: 2,
+                pointBackgroundColor: 'rgba(13, 148, 136, 1)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgba(13, 148, 136, 1)'
+            }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            scales: { r: { angleLines: { color: 'rgba(0, 0, 0, 0.1)' }, grid: { color: 'rgba(0, 0, 0, 0.1)' }, pointLabels: { font: { size: 14 } }, suggestedMin: 0, suggestedMax: 100, ticks: { backdropColor: 'rgba(255, 255, 255, 0.75)', stepSize: 20 } } },
+            plugins: { legend: { display: false } }
+        }
+    });
+
+    // Language switchers
+    document.querySelectorAll('.lang-switcher a').forEach(el => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            const lang = e.target.dataset.lang;
+            localStorage.setItem('preferredLanguage', lang);
+            updateContent(lang);
+        });
+    });
+
+    // Project filters
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const currentLang = localStorage.getItem('preferredLanguage') || 'pt';
+            filterBtns.forEach(b => {
+                b.classList.remove('bg-teal-500', 'text-white');
+                b.classList.add('bg-stone-200', 'text-stone-800');
+            });
+            btn.classList.add('bg-teal-500', 'text-white');
+            btn.classList.remove('bg-stone-200', 'text-stone-800');
+            renderProjects(currentLang, btn.dataset.filter);
+        });
+    });
+
+    // Mobile menu
+    const menuButton = document.getElementById('menu-button');
+    const mobileNav = document.getElementById('mobile-nav');
+    menuButton.addEventListener('click', () => {
+        mobileNav.classList.toggle('hidden');
+    });
+    mobileNav.addEventListener('click', () => {
+         mobileNav.classList.add('hidden');
+    });
+
+    // Nav highlighting on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinksDesktop = document.querySelectorAll('#desktop-nav a');
+    const navLinksMobile = document.querySelectorAll('#mobile-nav a');
+    function changeNav(links) {
+        let index = sections.length;
+        while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
+        links.forEach((link) => link.classList.remove('active-nav'));
+        if (links[index]) {
+           links[index].classList.add('active-nav');
+        }
+    }
+    window.addEventListener('scroll', () => {
+        changeNav(navLinksDesktop);
+        changeNav(navLinksMobile);
+    });
+
+    // Initial load
+    const preferredLanguage = localStorage.getItem('preferredLanguage') || 'pt';
+    updateContent(preferredLanguage);
+});
 </script>
 
 </body>
